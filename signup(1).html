@@ -1,0 +1,206 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="G:\somil\Final proj\signup(1).css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+	$(document).ready(function(){
+        $("#unamereq").hide();
+        $("#mailreq").hide();
+        $("#passwreq").hide();
+        $("#passreq").hide();
+
+        $("input").focus(function(){
+        $(this).css("border-color","red");
+        });
+        
+        $("#uname").focusout(function(){
+            var name=$("#uname").val();
+            var namelen = $("#uname").val().length;
+            if (name=="" || name==" ")
+            {
+                $("#unamereq").html("Please enter your Name!")
+                $("#unamereq").show();
+                $("input").focus(function(){
+                $(this).css("border-color","red");
+                });
+            }
+            else
+            {
+                $("#unamereq").hide();
+                $("input").blur(function(){
+                $(this).css("border-color","green");
+                });
+            }
+        });
+        $("#mail").focusout(function(){
+            var email = $("#mail").val();
+            if (!(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)))
+            {
+                $("#mailreq").html("Please enter your correct Email!");
+                $("#mailreq").show()
+                $("input").focus(function(){
+                $(this).css("border-color","red");
+                });
+            }
+            else
+            {
+                $("#mailreq").hide();
+                $("input").blur(function(){
+                $(this).css("border-color","green");
+                });
+            }
+        });
+        $("#passw").focusout(function(){
+            var pword = $("#passw").val();
+            var plength = $("#passw").val().length;
+            if (plength < 1)
+            {
+                $("#passwreq").html("Please enter your password!")
+                $("#passwreq").show()
+                $("input").blur(function(){
+                $(this).css("border-color","red");
+                });
+            }
+            else if(plength < 5 || plength > 15)
+            {
+                $("#passwreq").html("Password must be between 5-15 characters");
+                $("#passwreq").show();
+                $("input").focus(function(){
+                $(this).css("border-color","red");
+                });
+            }
+            else
+            {
+                $("#passwreq").hide();
+                $("input").blur(function(){
+                $(this).css("border-color","green");
+                });
+            }
+        });
+        $("#cpass").focusout(function(){
+            var pass = $("#cpass").val();
+            var passlength = $("#cpass").val().length;
+            if (passlength < 1)
+            {
+                $("#passreq").html("Please enter your Password again.!")
+                $("#passreq").show()
+                $("input").focus(function(){
+                $(this).css("border-color","red");
+                });
+            }
+            else if(passlength < 5 || passlength > 15)
+            {
+                $("#passreq").html("Password Does not match !! Enter again..");
+                $("#passreq").show();
+                $("input").focus(function(){
+                $(this).css("border-color","red");
+                });
+            }
+            else
+            {
+                $("#passreq").hide();
+                $("input").blur(function(){
+                $(this).css("border-color","green");
+                });
+            }
+        });
+    });
+    </script>
+
+    <style>
+        body {
+        font-family: Arial;
+        padding: 10px;
+        background: #f1f1f1;
+        }
+
+        .header{
+        padding: 30px;
+        text-align: center;
+        background: white;
+        }
+
+        .topnav {
+        overflow: hidden;
+        background-color:rgb(4, 27, 100);
+        }
+
+        .topnav a {
+        float: left;
+        display:block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 0.5px 16px;
+        text-decoration:none;
+        }
+
+        .topnav a:hover {
+        background-color:#ddd;
+        color: black;
+        }
+
+        .card {
+        width:45%;
+        float:left;
+        background-color: rgb(221, 221, 223);
+        padding: 20px;
+        margin-top: 20px;
+        }
+
+        .footer {
+        padding: 20px;
+        text-align: center;
+        background: rgb(183, 181, 212);
+        margin: 10px 39px 10px 30px;
+        }
+
+    </style>
+
+    <body>
+        <div class="header" style="height:90px">
+            <h1>Columbia Saint Mary's Health Care</h1>
+            <p>Always caring for the loved ones</p>
+        </div>
+
+        <div class="topnav">
+            <a href="login (1).html" style="float:right"><h4>Login</h4></a>
+        </div>
+
+        <h1 style="margin:80px 0px -83px 11.5cm"><b>Kindly Sign Up to Register</b></h1>
+
+        <div class="frame">
+        <h1 class="u">
+        <b>Registeration</b>
+        </h1>
+        <form>
+            <div class="form">
+                Username :    <input id="uname" type="text" name="username" style="border-radius: 20px ; margin-left:30px">
+                <br>
+                <div id = "unamereq"></div>
+                <br>
+                Email :    <input id="mail" type="email" name="email" style="border-radius: 20px ; margin-left:63px">
+                <br>
+                <div id = "mailreq"></div>
+                <br>
+                Password : <input id="passw" type="text" name="password" style="border-radius: 20px ; margin-left:35px">
+                <br>
+                <div id = "passwreq"></div>
+                <br>
+                Confirm Password : <input id="cpass" type="text" name="confirm" style="border-radius: 20px ; margin-left:6px">
+                <br>
+                <div id = "passreq"></div>
+                <br>
+                <input type="submit" name="submit">
+                <p class="last"><b>Already a User?    <a href="D:\somil\Final proj\login (1).html">Login</a></b></p>
+            </div>
+        </form> 
+    </div>
+   <div class="footer">
+    <h2>Follow us</h2>
+    <img src="G:\somil\Final proj\images\insta.jpg"height="100" width="100">
+    <img src="G:\somil\Final proj\images\facebook.png" height="100" width="100"><br>
+    <h2>For more details call:+91 7877675421</h2>
+    <h2>Address:Blockyard Metro Station,NYC</h2>
+    </div>
+</body>
+</html>

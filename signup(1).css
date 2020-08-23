@@ -1,0 +1,38 @@
+ h1.u{
+     color: white;
+	 padding: 2% 0% 2% 0%;
+	 text-indent: 27%;
+	 background-color: rgb(4, 27, 100);
+	 margin: 0% 0% 0% 0%;
+	 border: 1px solid;
+	 border-top-left-radius: 20px;
+	 border-top-right-radius: 20px;
+    }
+.frame{
+        height:300px;
+        width:400px;
+		padding: 0% 0% 5% 0%;
+        background-color: white;
+		margin: 10% 35% 1.5% 35%;
+		border: 1px solid white;
+		border-radius: 20px;
+    }
+.form{
+		margin: 0.5%;
+		padding: 5% 0% 0% 0%;
+        text-align: center;
+		color: #3F51B5;
+		border: 1px solid #3F51B2;
+		border-bottom-left-radius: 20px;
+	 	border-bottom-right-radius: 20px;
+    }
+input[type=submit]{
+        width: 65%;
+		background-color: rgb(4, 27, 100);
+        color: white;
+        border: 1px solid rgb(4, 27, 100);
+		padding: 12px 50px;
+		margin: 5% 0% 2% 0%;
+        border-radius: 5px;
+        cursor:pointer;
+    }
